@@ -4,8 +4,8 @@ import Typewriter from 'typewriter-effect';
 
 function Footer() {
   return (
-    <div className="flex justify-center align-middle flex-col text-center mt-16">
-      <p className="text-sm-gray-600">
+    <div className="flex justify-center align-middle flex-col text-center mt-16 text-gray-600">
+      <p className="">
         <Typewriter
           onInit={(typewriter) => {
             typewriter.typeString('ValenciaHQ')
@@ -16,7 +16,7 @@ function Footer() {
       </p>
       <a className="text-blue-500 hover:underline" href="https://fastupload.io/en/feyBUUFfWmA5LpE/file" target="_blank" rel="noreferrer">Download my resume</a>
       <a
-        className="flex items-center justify-center  m-1 p-1 sm:m-2 sm:p-2 text-gray-100 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
+        className="flex items-center justify-center  m-1 p-1 sm:m-2 sm:p-2 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
         href={'https://github.com/valenciaHQ/resume'}
       >
         <FaGithub className='text-xl' />
