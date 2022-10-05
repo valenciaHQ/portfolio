@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 function Footer() {
   return (
-    <div className="flex justify-center align-middle flex-col text-center mt-16 text-gray-600">
+    <section className="flex justify-center align-middle flex-col text-center mt-16 text-gray-600">
       <p className="">
         <Typewriter
           onInit={(typewriter) => {
@@ -22,7 +22,7 @@ function Footer() {
         <FaGithub className='text-xl' />
         <p style={{ margin: "0.5rem" }} className='text-lg'>Project repo</p>
       </a>
-    </div>
+    </section>
   )
 }
 

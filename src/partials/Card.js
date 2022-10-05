@@ -6,7 +6,7 @@ import { FaRegEnvelope } from "react-icons/fa";
 
 function Card({ name, title, social: { github, linkedln, twitter, email } }) {
   return (
-    <div className="w-full">
+    <article className="w-full">
       <div className="flex flex-col justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5 dark:bg-slate-600">
         <div className="">
           <img
@@ -54,7 +54,7 @@ function Card({ name, title, social: { github, linkedln, twitter, email } }) {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

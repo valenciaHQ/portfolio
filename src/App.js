@@ -14,8 +14,7 @@ function App() {
     });
   });
   return (
-    <div className="w-screen p-10 bg-gray-100 dark:bg-slate-800">
-
+    <main className="w-screen p-10 bg-gray-100 dark:bg-slate-800">
       <div data-aos="fade-down" data-aos-duration="800">
         <Card name={data.name} title={data.title} social={data.social} />
       </div>
@@ -26,7 +25,7 @@ function App() {
         <Section data={data.interests} title='I like to talk about...' />
         <Footer github={data.social.github} />
       </div>
-    </div>
+    </main>
   );
 }
 export default App;
