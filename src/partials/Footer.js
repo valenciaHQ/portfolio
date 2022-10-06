@@ -14,7 +14,7 @@ function Footer() {
           }}
         />
       </p>
-      <a className="text-blue-500 hover:underline" href="https://fastupload.io/en/feyBUUFfWmA5LpE/file" target="_blank" rel="noreferrer">Download my resume</a>
+      <a className="text-blue-500 hover:underline" href={`${process.env.PUBLIC_URL}/Alejandro_Valencia.pdf`} download>Download my resume</a>
       <a
         className="flex items-center justify-center  m-1 p-1 sm:m-2 sm:p-2 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
         href={'https://github.com/valenciaHQ/portfolio'}
