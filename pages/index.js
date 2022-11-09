@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import AOS from "aos";
 import data from "../data";
 import { useTheme } from 'next-themes'
