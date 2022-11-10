@@ -16,6 +16,7 @@ function App() {
         AOS.init({
             once: true,
         });
+        setTheme('light')
     }, []);
 
     const toogleEffect = () => {
@@ -26,7 +27,7 @@ function App() {
     return (
         <main className="w-screen p-10 bg-gray-100 dark:bg-slate-800">
             <button onClick={toogleEffect} className="text-dark border-2 border-gray-500 p-2 text-sm rounded-md dark:text-white dark:border-cyan-200">
-                {`Toggle dark ${toogle ? "on" : "off"}`}
+                {`Toggle dark ${toogle ? "off" : "on"}`}
             </button>
             <div data-aos="fade-down" data-aos-duration="800">
                 <Suspense fallback={<div>Loading...</div>}>
