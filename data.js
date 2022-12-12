@@ -1,5 +1,6 @@
 import React from "react";
 import { FaReact, FaCode, FaRegSun, FaEthereum, FaDeezer, FaGamepad, FaBacon } from "react-icons/fa";
+import { SiThreedotjs } from "react-icons/si";
 
 const BOOTSTRAP_FOR_SKILL_ICON = "text-4xl mx-auto inline-block";
 const data = {
@@ -49,6 +50,10 @@ const data = {
     {
       inputName: 'Food',
       inputIcon: <FaBacon className={BOOTSTRAP_FOR_SKILL_ICON} />
+    },
+    {
+      inputName: '3D',
+      inputIcon: <SiThreedotjs className={BOOTSTRAP_FOR_SKILL_ICON} />
     },
   ],
   projects: [
