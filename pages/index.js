@@ -38,12 +38,17 @@ function App() {
             <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <Suspense fallback={<div>Loading...</div>}>
                     <About title={data.about.title} description={data.about.description} />
-                    <Section data={data.skills} />
-                    <Section data={data.interests} title='I like to talk about...' />
-                    <Footer github={data.social.github} />
                 </Suspense>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Section data={data.skills} />
+                </Suspense>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Section data={data.interests} title='I like to talk about...' />
+                </Suspense>
+                <Suspense fallback={<div>Loading...</div>}></Suspense>
+                <Footer github={data.social.github} />
             </div>
-        </main>
+        </main >
     );
 }
 export default App;
