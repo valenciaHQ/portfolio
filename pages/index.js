@@ -26,7 +26,7 @@ function App() {
 
     return (
         <main className="w-screen p-10 bg-gray-100 dark:bg-slate-800">
-            <button onClick={toogleEffect} className="text-dark border-2 border-gray-500 p-2 text-sm rounded-md dark:text-white dark:border-cyan-200">
+            <button onClick={toogleEffect} className="text-dark border-2 border-gray-500 p-2 text-sm rounded-md dark:text-white dark:border-cyan-200 mb-2">
                 {`Toggle dark ${toogle ? "off" : "on"}`}
             </button>
             <div data-aos="fade-down" data-aos-duration="800">
