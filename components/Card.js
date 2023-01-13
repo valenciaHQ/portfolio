@@ -16,12 +16,12 @@ function Card({ name, title, social: { github, linkedln, twitter, email } }) {
           height={500}
         />
         <div className="text-center mt-5">
-          <p className="text-xl sm:text-2xl font-semibold text-gray-600 dark:text-white">
+          <h1 className="text-xl sm:text-2xl font-semibold text-gray-600 dark:text-white">
             {name}
-          </p>
-          <p className="text-xs sm:text-base text-gray-600 pt-2 pb-4 px-5 w-auto inline-block border-b-2 dark:text-white">
+          </h1>
+          <h2 className="text-xs sm:text-base text-gray-600 pt-2 pb-4 px-5 w-auto inline-block border-b-2 dark:text-white">
             {title}
-          </p>
+          </h2>
           <div className="flex align-center justify-center mt-4 ">
             <a
               className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-gray-800 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
