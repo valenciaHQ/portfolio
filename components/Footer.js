@@ -14,7 +14,7 @@ function Footer() {
       />
       <a className="text-blue-500 hover:underline" href={`files/alejandrovalencia.pdf`} download>Download my resume</a>
       <a
-        className="flex items-center justify-center  m-1 p-1 sm:m-2 sm:p-2 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
+        className="flex items-center justify-center  m-1 p-1 sm:m-2 sm:p-2 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300 dark:hover:bg-gray-400"
         href={'https://github.com/valenciaHQ/portfolio'}
       >
         <FaGithub className='text-xl' />
