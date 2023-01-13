@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"index.js -> ../components/About":{"id":"index.js -> ../components/About","files":["static/chunks/components_About_js.js"]},"index.js -> ../components/Card":{"id":"index.js -> ../components/Card","files":["static/chunks/components_Card_js.js"]},"index.js -> ../components/Footer":{"id":"index.js -> ../components/Footer","files":["static/chunks/components_Footer_js.js"]},"index.js -> ../components/Section":{"id":"index.js -> ../components/Section","files":["static/chunks/components_Section_js.js"]}}
+self.__REACT_LOADABLE_MANIFEST={}
