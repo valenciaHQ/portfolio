@@ -28,7 +28,7 @@ function App() {
     return (
         <>
             <NextSeo
-                title="Hi there!"
+                title="Hi there! Call me Ale."
                 description="Alejandro Valencia's website, software developer focused in frontend using React, Nextjs, Tailwind and good practices."
                 canonical="https://valenciahq.com/"
             />
@@ -52,8 +52,9 @@ function App() {
                     <Suspense fallback={<div>Loading...</div>}>
                         <Section data={data.interests} title='I like to talk about...' />
                     </Suspense>
-                    <Suspense fallback={<div>Loading...</div>}></Suspense>
-                    <Footer github={data.social.github} />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Footer github={data.social.github} />
+                    </Suspense>
                 </div>
             </main >
         </>
