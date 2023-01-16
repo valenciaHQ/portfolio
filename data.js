@@ -14,7 +14,7 @@ const data = {
   },
   about: {
     title: "My Background",
-    description: "I have worked in several companies and teams. This formed me as a versatile developer, highly focused in order. My technical expertise includes skills in React, state management, scss / css in js / Tailwind, backend languages and libs such as java/node, relational and non-relational databases."
+    description: "I've been a software engineer for over 10 years, from 2017 I focused my career path mostly on Frontend. I'm a team player but I also know how to be independent. I do like mentoring, ordering, clean code, and research.."
   },
   skills: [
     {
