@@ -14,7 +14,7 @@ const social = {
   github: "https://github.com/valenciaHQ",
   linkedln: "https://www.linkedin.com/in/valenciaalejandro/",
   twitter: "https://twitter.com/_valenciaHQ",
-  email: "alejandro.d.valencia@gmail.com",
+  email: "alejandro.valencia.dev@gmail.com",
 };
 
 export default function LandingPage() {
