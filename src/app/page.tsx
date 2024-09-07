@@ -18,12 +18,6 @@ const social = {
   email: "alejandro.d.valencia@gmail.com",
 };
 
-export const metadata: Metadata = {
-  title: "Alejandro Valencia | Software engineer",
-  description:
-    "I'm a freelance software engineer, and i can help your software dreams to come true 🚀",
-};
-
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
