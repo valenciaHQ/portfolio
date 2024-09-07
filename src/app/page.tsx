@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Code, Laptop, Smartphone, Code2 } from "lucide-react";
-import { Metadata } from "next";
 import projects from "@/projects.json";
 import {
   GitHubLogoIcon,
