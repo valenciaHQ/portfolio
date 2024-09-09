@@ -130,10 +130,12 @@ export default function LandingPage() {
             <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <Laptop className="h-8 w-8 mb-2" />
-                <h3 className="text-xl font-bold text-center">Web Design</h3>
+                <h3 className="text-xl font-bold text-center">
+                  Software development
+                </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                  Creating stunning, user-friendly designs that captivate your
-                  audience.
+                  Hourly basis javascript/typescript end to end development,
+                  from scratch to production.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
@@ -154,6 +156,17 @@ export default function LandingPage() {
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                   Ensuring your website looks great on all devices, from mobile
                   to desktop.
+                </p>
+              </div>
+              <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
+                <Smartphone className="h-8 w-8 mb-2" />
+                <h3 className="text-xl font-bold text-center">
+                  Software Development Advisor
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+                  Will help on successful delivery of high-quality software
+                  products by offering insights based on industry best practices
+                  and emerging trends.
                 </p>
               </div>
             </div>
