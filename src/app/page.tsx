@@ -48,12 +48,6 @@ export default function LandingPage() {
           >
             Projects
           </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#testimonials"
-          >
-            Testimonials
-          </Link>
         </nav>
       </header>
       <main className="flex-1">
