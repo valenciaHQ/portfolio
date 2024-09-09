@@ -19,9 +19,9 @@ const social = {
 };
 
 export const metadata: Metadata = {
-  title: "Alejandro Valencia | Software engineer",
+  title: "🔨💻 Alejandro Valencia | Freelance Software Engineer",
   description:
-    "I'm a freelance software engineer, and i can help your software dreams to come true 🚀",
+    "I'm a freelance software engineer, and i can help your software dreams to come true, let's talk! 🚀",
   verification: {
     google: "eiR5Si3R-AC_yoi9sAJmODND7vjlDPqRqRMp3BM1M4I",
   },
