@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Alejandro Valencia | Software engineer",
   description:
     "I'm a freelance software engineer, and i can help your software dreams to come true 🚀",
+  verification: {
+    google: "eiR5Si3R-AC_yoi9sAJmODND7vjlDPqRqRMp3BM1M4I",
+  },
 };
 
 export default function RootLayout({
