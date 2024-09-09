@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Code, Laptop, Smartphone, Code2 } from "lucide-react";
+import { Code, Laptop, Smartphone, Code2, Brain } from "lucide-react";
 import projects from "@/projects.json";
 import {
   GitHubLogoIcon,
@@ -127,7 +127,7 @@ export default function LandingPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               Services
             </h2>
-            <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid gap-10 grid-cols-1 md:grid-cols-2">
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
                 <Laptop className="h-8 w-8 mb-2" />
                 <h3 className="text-xl font-bold text-center">
@@ -159,7 +159,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-                <Smartphone className="h-8 w-8 mb-2" />
+                <Brain className="h-8 w-8 mb-2" />
                 <h3 className="text-xl font-bold text-center">
                   Software Development Advisor
                 </h3>
