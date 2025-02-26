@@ -1,20 +1,39 @@
 [{
-    "url": "https://thefoodtruckleague.com/",
-    "name": "thefoodtruckleague"
+    "id": "thefoodtruckleague",
+    "link": "https://thefoodtruckleague.com/",
+    "title": "The Food Truck League",
+    "description": "The Food Truck League is a food truck booking and event planning company that specializes in creating memorable experiences for clients and guests alike.",
+    "tags": ["Typescript", "React", "Nextjs", "Node.js", "Smartsheet", "Sass", "Tailwind CSS", "AWS"]
 },{
-    "url": "https://www.chelagarto.com/",
-    "name": "chelagarto"
+    "id": "chelagarto",
+    "link": "https://www.chelagarto.com/",
+    "title": "Che Lagarto",
+    "description": "Che Lagarto is a hostel chain with over 30 locations in 6 countries. They offer affordable accommodations for travelers looking to explore South America.",
+    "tags": ["Typescript", "React", "Nextjs", "Node.js", "Tailwind CSS", "AWS", "Vercel"]
 },{
-    "url": "https://www.nuqlea.com/",
-    "name": "nuqlea"
+    "id": "nuqlea",
+    "link": "https://www.nuqlea.com/",
+    "title": "Nuqlea",
+    "description": "It is the construction digitalization platform. It is a platform that allows construction companies to manage their projects, teams, and clients in one place.",
+    "tags": ["Typescript", "React", "Nextjs", "Serverless", "Material UI"]
 },{
-    "url": "https://blinktrip.com/",
-    "name": "blinktrip"
+    "id": "blinktrip",
+    "link": "https://blinktrip.com/",
+    "title": "Blinktrip",
+    "description": "Blinktrip is a platform that allows travel agencies to manage their bookings, clients, and suppliers in one place.",
+    "tags": ["Typescript", "React", "Nextjs", "Tailwind CSS", "Strapi", "AWS", "Vercel"]
 },{
-    "url": "https://theharvestgame.com/",
-    "name": "theharvestgame"
+    "id": "theharvestgame",
+    "link": "https://store.steampowered.com/app/1223360/The_Harvest/",
+    "title": "The Harvest Game",
+    "description": "Dive into thrilling team conflicts in an action-packed Hero Shooter incorporating unique MOBA elements. Customize your hero combat style with a singular card system.",
+    "tags": ["Typescript", "React", "Nextjs", "Styled components"]
 },{
-    "url": "https://defiantapp.tech/",
-    "name": "defiant"
+    "id": "defiant",
+    "link": "https://defiantapp.tech/",
+    "title": "Defiant App",
+    "description": "Defiant App is crypto wallet app.",
+    "tags": ["Typescript", "React", "Nextjs", "Tailwind CSS", "Sanity"]
+
 }
 ]

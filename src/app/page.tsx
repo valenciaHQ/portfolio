@@ -1,3 +1,5 @@
+/** @format */
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Code, Laptop, Smartphone, Code2, Brain } from "lucide-react";
@@ -10,6 +12,7 @@ import {
 } from "@radix-ui/react-icons";
 import Image from "next/image";
 import { Metadata } from "next";
+import ProjectCard from "@/components/ui/projectCard";
 
 const social = {
   github: "https://github.com/valenciaHQ",
@@ -181,24 +184,8 @@ export default function LandingPage() {
               Projects
             </h2>
             <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-              {projects.map(({ url, name }) => (
-                <div
-                  key={name}
-                  className="flex group relative justify-center overflow-hidden"
-                >
-                  <Image
-                    src={`/img/${name}.png`}
-                    alt={`Project ${name}`}
-                    className="object-contain transition-transform group-hover:scale-110 rounded-lg"
-                    width={200}
-                    height={200}
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity group-hover:opacity-100 flex items-center justify-center opacity-0">
-                    <Link href={url} target="_blank">
-                      <Button variant="secondary">View Project</Button>
-                    </Link>
-                  </div>
-                </div>
+              {projects.map((project) => (
+                <ProjectCard key={project.title} {...project} />
               ))}
             </div>
           </div>
