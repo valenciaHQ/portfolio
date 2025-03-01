@@ -116,7 +116,7 @@ export default function LandingPage() {
                   className="text-blue-500 hover:underline"
                   href={`files/alejandrovalencia.pdf`}
                 >
-                  Get my career
+                  Resume
                 </Link>
               </div>
             </div>
