@@ -10,7 +10,6 @@ import {
   TwitterLogoIcon,
   EnvelopeClosedIcon,
 } from "@radix-ui/react-icons";
-import Image from "next/image";
 import { Metadata } from "next";
 import ProjectCard from "@/components/ui/projectCard";
 
