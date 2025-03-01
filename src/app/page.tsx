@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   verification: {
     google: "eiR5Si3R-AC_yoi9sAJmODND7vjlDPqRqRMp3BM1M4I",
   },
+  keywords:
+    "freelance, software engineer, web developer, javascript, typescript, react, nextjs, nodejs, graphql, freelance software engineer, freelance web developer, freelance javascript developer, freelance typescript developer, freelance react developer, freelance nextjs developer, freelance nodejs developer, freelance graphql developer",
+  applicationName: "Alejandro Valencia",
+  robots: "index, follow",
+  category: "Software Development",
 };
 
 export default function LandingPage() {
