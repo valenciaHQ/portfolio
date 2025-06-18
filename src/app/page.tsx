@@ -21,17 +21,52 @@ const social = {
 };
 
 export const metadata: Metadata = {
-  title: "🔨💻 Alejandro Valencia | Freelance Software Engineer",
+  title: "Alejandro Valencia | Startup-Focused Freelance Software Engineer",
   description:
-    "I'm a freelance software engineer, and i can help your software dreams to come true, let's talk! 🚀",
+    "Startup-focused freelance software engineer. I help founders and teams turn ideas into scalable products—rapid MVPs, robust platforms, and hands-on technical partnership. Let's launch and grow your next big thing!",
   verification: {
     google: "eiR5Si3R-AC_yoi9sAJmODND7vjlDPqRqRMp3BM1M4I",
   },
   keywords:
-    "freelance, software engineer, web developer, javascript, typescript, react, nextjs, nodejs, graphql, freelance software engineer, freelance web developer, freelance javascript developer, freelance typescript developer, freelance react developer, freelance nextjs developer, freelance nodejs developer, freelance graphql developer",
-  applicationName: "Alejandro Valencia",
-  robots: "index, follow",
+    "startup, freelance software engineer, product development, MVP, web developer, SaaS, React, Next.js, TypeScript, Node.js, scalable platforms, technical partner, founder, rapid prototyping, software consultant, Alejandro Valencia",
+  applicationName: "Alejandro Valencia Portfolio",
+  robots:
+    "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   category: "Software Development",
+  authors: [
+    {
+      name: "Alejandro Valencia",
+      url: "https://www.linkedin.com/in/valenciaalejandro/",
+    },
+  ],
+  creator: "Alejandro Valencia",
+  publisher: "Alejandro Valencia",
+  openGraph: {
+    title: "Alejandro Valencia | Startup-Focused Freelance Software Engineer",
+    description:
+      "I help startups and founders turn ideas into scalable products—rapid MVPs, robust platforms, and hands-on technical partnership.",
+    url: "www.valenciahq.com",
+    siteName: "Alejandro Valencia Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Alejandro Valencia - Freelance Software Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alejandro Valencia | Startup-Focused Freelance Software Engineer",
+    description:
+      "I help startups and founders turn ideas into scalable products—rapid MVPs, robust platforms, and hands-on technical partnership.",
+    site: "@_valenciaHQ",
+    creator: "@_valenciaHQ",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function LandingPage() {
@@ -66,8 +101,12 @@ export default function LandingPage() {
                   Hello! I&apos;m Alejandro Valencia
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Crafting beautiful, responsive, and user-friendly websites.
-                  Let&apos;s bring your digital vision to life.
+                  Full-stack Software Engineer with 10+ years of experience
+                  building scalable web applications. I’ve specialized in
+                  Frontend development with React and TypeScript, delivering
+                  MVPs and full platforms for startups and tech-driven teams.
+                  <br /> Strong focus on clean architecture, product thinking,
+                  and cross-functional collaboration.
                 </p>
               </div>
               <div className="flex align-center justify-center mt-4 ">
