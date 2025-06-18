@@ -116,12 +116,13 @@ export default function LandingPage() {
                 >
                   <Button>Reach me!</Button>
                 </Link>
-                <Link
+                <a
+                  download="Alejandro_Valencia_Resume.pdf"
                   className="text-blue-500 hover:underline"
-                  href={`files/alejandrovalencia.pdf`}
+                  href="/files/alejandrovalencia.pdf"
                 >
                   Resume
-                </Link>
+                </a>
               </div>
             </div>
           </div>
