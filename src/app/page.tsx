@@ -1,5 +1,7 @@
 /** @format */
 
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,7 +19,6 @@ import {
   Award,
   GraduationCap,
   Code,
-  Briefcase,
   Languages,
   Star,
 } from "lucide-react";
@@ -167,15 +168,11 @@ export default function Portfolio() {
           <div className="flex justify-center gap-4">
             <Button
               size="lg"
-              className="bg-gray-900 text-white hover:bg-gray-800"
-            >
-              <Briefcase className="w-4 h-4 mr-2" />
-              View Work
-            </Button>
-            <Button
-              size="lg"
               variant="outline"
               className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+              onClick={() => {
+                window.location.href = "mailto:someone@example.com";
+              }}
             >
               <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
               Get In Touch
@@ -382,7 +379,11 @@ export default function Portfolio() {
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               size="lg"
-              className="bg-white text-gray-900 hover:bg-gray-100"
+              variant="outline"
+              className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
+              onClick={() => {
+                window.location.href = "mailto:someone@example.com";
+              }}
             >
               <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
               alejandro.d.valencia@gmail.com
@@ -399,6 +400,9 @@ export default function Portfolio() {
               size="lg"
               variant="outline"
               className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
+              onClick={() => {
+                window.open("https://github.com/valenciaHQ", "_blank");
+              }}
             >
               <Github className="w-4 h-4 mr-2" />
               GitHub Profile
