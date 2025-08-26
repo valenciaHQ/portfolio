@@ -140,7 +140,7 @@ export default function Portfolio() {
               Alejandro Valencia
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-6">
-              Full-stack Software Engineer
+              Product Engineer
             </p>
             <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
               10+ years of experience building scalable web applications.
@@ -171,11 +171,23 @@ export default function Portfolio() {
               variant="outline"
               className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
               onClick={() => {
-                window.location.href = "mailto:someone@example.com";
+                window.location.href = "mailto:alejandro.d.valencia@gmail.com";
               }}
             >
               <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
               Get In Touch
+            </Button>
+            <Button
+              size="lg"
+              className="bg-gray-900 text-white hover:bg-gray-800"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/files/alejandrovalencia.pdf";
+                link.download = "alejandro-valencia-resume.pdf";
+                link.click();
+              }}
+            >
+              Download Resume
             </Button>
           </div>
         </div>
