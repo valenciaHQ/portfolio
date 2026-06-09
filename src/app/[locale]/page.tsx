@@ -1,6 +1,7 @@
 "use client";
 /** @format */
 
+import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -26,88 +27,43 @@ import {
 import { EnvelopeClosedIcon, CalendarIcon } from "@radix-ui/react-icons";
 import { AnimatedGrid, AnimatedItem } from "@/components/ui/AnimatedSection";
 import { staggerContainer, fadeSlideUp } from "@/lib/animations";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { HeroBlobs } from "@/components/HeroBlobs";
+
+const techStack = [
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Next.js",
+  "Remix",
+  "Node.js",
+  "Express.js",
+  "NestJS",
+  "PostgreSQL",
+  "Supabase",
+  "MongoDB",
+  "Redux Toolkit",
+  "Zustand",
+  "Tailwind CSS",
+  "AWS",
+  "Vercel",
+  "Cypress",
+  "Jest",
+  "Claude Code",
+];
+
+type Job = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+  stack: string;
+};
 
 export default function Portfolio() {
-  const techStack = [
-    "JavaScript",
-    "TypeScript",
-    "React.js",
-    "Next.js",
-    "Remix",
-    "Node.js",
-    "Express.js",
-    "NestJS",
-    "PostgreSQL",
-    "Supabase",
-    "MongoDB",
-    "Redux Toolkit",
-    "Zustand",
-    "Tailwind CSS",
-    "AWS",
-    "Vercel",
-    "Cypress",
-    "Jest",
-  ];
-
-  const skills = [
-    "Full-Stack Web Development",
-    "Rapid Prototyping & MVP Delivery",
-    "Product Thinking & User-Centered Design",
-    "Codebase Scalability & Maintainability",
-    "Cross-functional Collaboration",
-    "Agile Methodologies",
-  ];
-
-  const workExperience = [
-    {
-      title: "Founding Engineer",
-      company: "Bondly",
-      period: "09/24 - Present",
-      description:
-        "Owned full lifecycle. Launched cookie consent, rebuilt scheduling tool, improved SEO and tracking.",
-      stack: "Next.js, Remix, NestJS, Supabase, TypeScript, AI tools",
-    },
-    {
-      title: "Freelance Developer",
-      company: "Independent",
-      period: "2023 - Present",
-      description:
-        "Building high-performance web applications and MVPs. Collaborated with CTOs and CEOs on startup initiatives.",
-      stack: "Next.js, React, TypeScript, Tailwind CSS, AWS Serverless",
-    },
-    {
-      title: "Senior Full Stack Engineer",
-      company: "StackZone",
-      period: "03/22 - 08/23",
-      description:
-        "Improved WebApp via refactoring, mentoring, and TS best practices. Built cost modules and Serverless APIs.",
-      stack: "React, TypeScript, AWS, Redux-Saga, Cypress, PostgreSQL",
-    },
-    {
-      title: "Lead Frontend Developer",
-      company: "Commit Studio",
-      period: "11/21 - 03/22",
-      description:
-        "Led feature development and team support. Delivered credit partner platform (PedidosYa) and e-commerce CLI.",
-      stack: "Next.js, TypeScript, MySQL, Redux-Toolkit",
-    },
-    {
-      title: "Sr Software Engineer",
-      company: "Santander Tecnologia",
-      period: "06/20 - 11/21",
-      description:
-        "Frontend lead for Checks team. Built microsites and BFF with NestJS. Led internal React training.",
-      stack: "React, NestJS, TypeScript, Redux-Toolkit",
-    },
-    {
-      title: "Software Engineer",
-      company: "ParkAssist",
-      period: "06/20 - 11/21",
-      description:
-        "Developed parking admin platform using AWS and React. Delivered performant client-side features.",
-      stack: "React, TypeScript, Redux, AWS IAM, IoT, DynamoDB",
-    },
-  ];
+  const t = useTranslations();
+  const skills = t.raw("skills.items") as string[];
+  const workExperience = t.raw("experience.jobs") as Job[];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
@@ -118,22 +74,27 @@ export default function Portfolio() {
             <h1 className="text-2xl font-bold text-gray-900">
               Alejandro Valencia
             </h1>
-            <div className="flex gap-4">
-              <Button
-                variant="outline"
-                className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
-                onClick={() => { window.location.href = "mailto:alejandro.d.valencia@gmail.com"; }}
+            <div className="flex gap-4 items-center">
+              <LocaleSwitcher />
+              <a href="mailto:alejandro.d.valencia@gmail.com">
+                <Button
+                  variant="outline"
+                  className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                >
+                  <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
+                  {t("nav.contact")}
+                </Button>
+              </a>
+              <a
+                href="https://github.com/valenciaHQ"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
-                Contact
-              </Button>
-              <Button
-                className="bg-gray-900 text-white hover:bg-gray-800"
-                onClick={() => { window.open("https://github.com/valenciaHQ", "_blank"); }}
-              >
-                <Github className="w-4 h-4 mr-2" />
-                GitHub
-              </Button>
+                <Button className="bg-gray-900 text-white hover:bg-gray-800">
+                  <Github className="w-4 h-4 mr-2" />
+                  {t("nav.github")}
+                </Button>
+              </a>
             </div>
           </nav>
         </div>
@@ -141,22 +102,7 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        {/* Animated color blobs */}
-        <motion.div
-          className="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-violet-300 opacity-30 blur-3xl pointer-events-none"
-          animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0], scale: [1, 1.1, 0.95, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-20 right-1/4 w-80 h-80 rounded-full bg-sky-300 opacity-25 blur-3xl pointer-events-none"
-          animate={{ x: [0, -50, 30, 0], y: [0, 40, -20, 0], scale: [1, 0.9, 1.15, 1] }}
-          transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-emerald-300 opacity-20 blur-3xl pointer-events-none"
-          animate={{ x: [0, 30, -40, 0], y: [0, -20, 30, 0], scale: [1, 1.2, 0.9, 1] }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
+        <HeroBlobs />
 
         <div className="relative max-w-6xl mx-auto text-center">
           <motion.div
@@ -173,13 +119,10 @@ export default function Portfolio() {
                 Alejandro Valencia
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-6">
-                Product Engineer
+                {t("hero.role")}
               </p>
               <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-                10+ years of experience building scalable web applications.
-                Specialized in Frontend development with React and TypeScript
-                since 2017, delivering MVPs and full platforms for startups and
-                tech-driven teams.
+                {t("hero.bio")}
               </p>
             </motion.div>
 
@@ -190,7 +133,7 @@ export default function Portfolio() {
             >
               <div className="flex items-center gap-2 text-gray-600">
                 <MapPin className="w-4 h-4" />
-                <span>Buenos Aires, Argentina</span>
+                <span>{t("hero.location")}</span>
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <EnvelopeClosedIcon className="w-4 h-4" />
@@ -207,18 +150,16 @@ export default function Portfolio() {
               variants={fadeSlideUp}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
-                onClick={() => {
-                  window.location.href =
-                    "mailto:alejandro.d.valencia@gmail.com";
-                }}
-              >
-                <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
-                Get In Touch
-              </Button>
+              <a href="mailto:alejandro.d.valencia@gmail.com">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                >
+                  <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
+                  {t("hero.getInTouch")}
+                </Button>
+              </a>
               <motion.a
                 href="/files/alejandrovalencia.pdf"
                 download="alejandro-valencia-resume.pdf"
@@ -229,15 +170,24 @@ export default function Portfolio() {
                 <motion.span
                   className="flex items-center"
                   animate={{ y: [0, -2, 0] }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 1.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 >
                   <FileText className="w-4 h-4" />
                 </motion.span>
-                Download Resume
+                {t("hero.downloadResume")}
                 <motion.span
                   className="text-xs opacity-60 group-hover:opacity-100 transition-opacity"
                   animate={{ y: [0, 2, 0] }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
+                  transition={{
+                    duration: 1.8,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.9,
+                  }}
                 >
                   PDF
                 </motion.span>
@@ -251,7 +201,7 @@ export default function Portfolio() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Core Skills
+            {t("skills.sectionTitle")}
           </h2>
           <AnimatedGrid className="grid md:grid-cols-2 gap-8">
             <AnimatedItem>
@@ -259,7 +209,7 @@ export default function Portfolio() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Star className="w-5 h-5 text-yellow-500" />
-                    Professional Skills
+                    {t("skills.professionalTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -283,21 +233,21 @@ export default function Portfolio() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Languages className="w-5 h-5 text-green-500" />
-                    Languages
+                    {t("skills.languagesTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Spanish</span>
+                      <span className="font-medium">{t("skills.spanish")}</span>
                       <Badge className="bg-green-100 text-green-800">
-                        Native
+                        {t("skills.spanishLevel")}
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">English</span>
+                      <span className="font-medium">{t("skills.english")}</span>
                       <Badge className="bg-blue-100 text-blue-800">
-                        B2/C1 Professional
+                        {t("skills.englishLevel")}
                       </Badge>
                     </div>
                   </div>
@@ -312,7 +262,7 @@ export default function Portfolio() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Tech Stack
+            {t("techStack.sectionTitle")}
           </h2>
           <AnimatedGrid className="grid grid-cols-1">
             <AnimatedItem>
@@ -320,10 +270,10 @@ export default function Portfolio() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Code className="w-5 h-5 text-purple-500" />
-                    Technologies & Tools
+                    {t("techStack.cardTitle")}
                   </CardTitle>
                   <CardDescription>
-                    Modern technologies I use to build scalable applications
+                    {t("techStack.cardDescription")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -349,7 +299,7 @@ export default function Portfolio() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Work Experience
+            {t("experience.sectionTitle")}
           </h2>
           <AnimatedGrid className="space-y-6">
             {workExperience.map((job, index) => (
@@ -394,7 +344,7 @@ export default function Portfolio() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Education & Certifications
+            {t("education.sectionTitle")}
           </h2>
           <AnimatedGrid className="grid md:grid-cols-2 gap-6">
             <AnimatedItem>
@@ -402,16 +352,18 @@ export default function Portfolio() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <GraduationCap className="w-5 h-5 text-blue-500" />
-                    Education
+                    {t("education.educationTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div>
                     <h3 className="font-semibold text-lg">
-                      Superior Software Development Technician
+                      {t("education.degreeTitle")}
                     </h3>
-                    <p className="text-gray-600">ISTEA - Tertiary Degree</p>
-                    <p className="text-sm text-gray-500">2014 - 2017</p>
+                    <p className="text-gray-600">{t("education.degreeSchool")}</p>
+                    <p className="text-sm text-gray-500">
+                      {t("education.degreePeriod")}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -422,22 +374,53 @@ export default function Portfolio() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-orange-500" />
-                    Certifications
+                    {t("education.certificationsTitle")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     <div>
-                      <h3 className="font-semibold">Epic React</h3>
+                      <h3 className="font-semibold">{t("education.cert1Title")}</h3>
                       <p className="text-sm text-gray-600">
-                        Kent C. Dodds (epicreact.dev)
+                        {t("education.cert1Provider")}
                       </p>
                     </div>
                     <Separator />
                     <div>
-                      <h3 className="font-semibold">CSS-in-JS</h3>
+                      <h3 className="font-semibold">{t("education.cert2Title")}</h3>
                       <p className="text-sm text-gray-600">
-                        Josh W. Comeau (css-for-js.dev)
+                        {t("education.cert2Provider")}
+                      </p>
+                    </div>
+                    <Separator />
+                    <div>
+                      <a
+                        href={t("education.cert3Url")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        <h3 className="font-semibold">{t("education.cert3Title")}</h3>
+                      </a>
+                      <p className="text-sm text-gray-600">
+                        {t("education.cert3Provider")}
+                      </p>
+                    </div>
+                    <Separator />
+                    <div>
+                      <a
+                        href={t("education.cert4Url")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        <h3 className="font-semibold">{t("education.cert4Title")}</h3>
+                      </a>
+                      <p className="text-sm text-gray-600">
+                        {t("education.cert4Provider")}
+                      </p>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {t("education.claudeCodeNote")}
                       </p>
                     </div>
                   </div>
@@ -451,23 +434,19 @@ export default function Portfolio() {
       {/* Contact Section */}
       <section className="py-16 px-4 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Let&#39;s Work Together</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Ready to build something amazing? I&#39;m always open to discussing
-            new opportunities and interesting projects.
-          </p>
+          <h2 className="text-3xl font-bold mb-6">{t("contact.sectionTitle")}</h2>
+          <p className="text-xl text-gray-300 mb-8">{t("contact.body")}</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
-              onClick={() => {
-                window.location.href = "mailto:alejandro.d.valencia@gmail.com";
-              }}
-            >
-              <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
-              alejandro.d.valencia@gmail.com
-            </Button>
+            <a href="mailto:alejandro.d.valencia@gmail.com">
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
+              >
+                <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
+                alejandro.d.valencia@gmail.com
+              </Button>
+            </a>
             <Button
               size="lg"
               variant="outline"
@@ -476,17 +455,20 @@ export default function Portfolio() {
               <Globe className="w-4 h-4 mr-2" />
               valenciahq.com
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
-              onClick={() => {
-                window.open("https://github.com/valenciaHQ", "_blank");
-              }}
+            <a
+              href="https://github.com/valenciaHQ"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Github className="w-4 h-4 mr-2" />
-              GitHub Profile
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
+              >
+                <Github className="w-4 h-4 mr-2" />
+                {t("contact.githubLabel")}
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -494,10 +476,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="py-8 px-4 bg-gray-800 text-gray-400">
         <div className="max-w-6xl mx-auto text-center">
-          <p>
-            &copy; 2024 Alejandro Valencia. Full-stack Software Engineer based
-            in Buenos Aires, Argentina.
-          </p>
+          <p>{t("footer.copy")}</p>
         </div>
       </footer>
     </div>
