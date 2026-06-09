@@ -49,6 +49,7 @@ const techStack = [
   "Vercel",
   "Cypress",
   "Jest",
+  "Claude Code",
 ];
 
 type Job = {
@@ -389,6 +390,37 @@ export default function Portfolio() {
                       <h3 className="font-semibold">{t("education.cert2Title")}</h3>
                       <p className="text-sm text-gray-600">
                         {t("education.cert2Provider")}
+                      </p>
+                    </div>
+                    <Separator />
+                    <div>
+                      <a
+                        href={t("education.cert3Url")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        <h3 className="font-semibold">{t("education.cert3Title")}</h3>
+                      </a>
+                      <p className="text-sm text-gray-600">
+                        {t("education.cert3Provider")}
+                      </p>
+                    </div>
+                    <Separator />
+                    <div>
+                      <a
+                        href={t("education.cert4Url")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        <h3 className="font-semibold">{t("education.cert4Title")}</h3>
+                      </a>
+                      <p className="text-sm text-gray-600">
+                        {t("education.cert4Provider")}
+                      </p>
+                      <p className="text-xs text-gray-400 mt-1">
+                        {t("education.claudeCodeNote")}
                       </p>
                     </div>
                   </div>

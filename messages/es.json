@@ -89,7 +89,14 @@
     "cert1Title": "Epic React",
     "cert1Provider": "Kent C. Dodds (epicreact.dev)",
     "cert2Title": "CSS-in-JS",
-    "cert2Provider": "Josh W. Comeau (css-for-js.dev)"
+    "cert2Provider": "Josh W. Comeau (css-for-js.dev)",
+    "cert3Title": "Claude Code 101",
+    "cert3Provider": "Anthropic (skilljar.com)",
+    "cert3Url": "https://anthropic.skilljar.com/claude-code-101",
+    "cert4Title": "Claude Code in Action",
+    "cert4Provider": "Anthropic (skilljar.com)",
+    "cert4Url": "https://anthropic.skilljar.com/claude-code-in-action",
+    "claudeCodeNote": "Usuario diario de Claude Code para desarrollo asistido por IA"
   },
   "contact": {
     "sectionTitle": "Trabajemos Juntos",
