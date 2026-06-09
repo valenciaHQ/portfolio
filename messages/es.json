@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "contact": "Contacto",
+    "github": "GitHub"
+  },
+  "hero": {
+    "role": "Ingeniero de Producto",
+    "bio": "Más de 10 años de experiencia construyendo aplicaciones web escalables. Especializado en desarrollo Frontend con React y TypeScript desde 2017, entregando MVPs y plataformas completas para startups y equipos tecnológicos.",
+    "location": "Buenos Aires, Argentina",
+    "getInTouch": "Contactame",
+    "downloadResume": "Descargar CV"
+  },
+  "skills": {
+    "sectionTitle": "Habilidades",
+    "professionalTitle": "Habilidades Profesionales",
+    "languagesTitle": "Idiomas",
+    "spanish": "Español",
+    "spanishLevel": "Nativo",
+    "english": "Inglés",
+    "englishLevel": "B2/C1 Profesional",
+    "items": [
+      "Desarrollo Web Full-Stack",
+      "Prototipado Rápido y Entrega de MVPs",
+      "Pensamiento de Producto y Diseño Centrado en el Usuario",
+      "Escalabilidad y Mantenibilidad de Código",
+      "Colaboración Interfuncional",
+      "Metodologías Ágiles"
+    ]
+  },
+  "techStack": {
+    "sectionTitle": "Stack Tecnológico",
+    "cardTitle": "Tecnologías y Herramientas",
+    "cardDescription": "Tecnologías modernas que uso para construir aplicaciones escalables"
+  },
+  "experience": {
+    "sectionTitle": "Experiencia Laboral",
+    "jobs": [
+      {
+        "title": "Ingeniero Fundador",
+        "company": "Bondly",
+        "period": "09/24 - Presente",
+        "description": "Responsable del ciclo completo. Lanzé el consentimiento de cookies, reconstruí la herramienta de agendamiento y mejoré el SEO y tracking.",
+        "stack": "Next.js, Remix, NestJS, Supabase, TypeScript, herramientas AI"
+      },
+      {
+        "title": "Desarrollador Freelance",
+        "company": "Independiente",
+        "period": "2023 - Presente",
+        "description": "Construcción de aplicaciones web de alto rendimiento y MVPs. Colaboré con CTOs y CEOs en iniciativas de startups.",
+        "stack": "Next.js, React, TypeScript, Tailwind CSS, AWS Serverless"
+      },
+      {
+        "title": "Ingeniero Full Stack Senior",
+        "company": "StackZone",
+        "period": "03/22 - 08/23",
+        "description": "Mejoré la WebApp mediante refactoring, mentoría y buenas prácticas de TypeScript. Construí módulos de costos y APIs Serverless.",
+        "stack": "React, TypeScript, AWS, Redux-Saga, Cypress, PostgreSQL"
+      },
+      {
+        "title": "Lead Frontend Developer",
+        "company": "Commit Studio",
+        "period": "11/21 - 03/22",
+        "description": "Lideré el desarrollo de features y soporte al equipo. Entregué la plataforma de créditos (PedidosYa) y un CLI de e-commerce.",
+        "stack": "Next.js, TypeScript, MySQL, Redux-Toolkit"
+      },
+      {
+        "title": "Ingeniero de Software Senior",
+        "company": "Santander Tecnologia",
+        "period": "06/20 - 11/21",
+        "description": "Líder Frontend del equipo de Cheques. Construí micrositios y un BFF con NestJS. Lideré capacitación interna de React.",
+        "stack": "React, NestJS, TypeScript, Redux-Toolkit"
+      },
+      {
+        "title": "Ingeniero de Software",
+        "company": "ParkAssist",
+        "period": "06/20 - 11/21",
+        "description": "Desarrollé una plataforma de administración de estacionamientos con AWS y React. Entregué features de alto rendimiento.",
+        "stack": "React, TypeScript, Redux, AWS IAM, IoT, DynamoDB"
+      }
+    ]
+  },
+  "education": {
+    "sectionTitle": "Educación y Certificaciones",
+    "educationTitle": "Educación",
+    "degreeTitle": "Técnico Superior en Desarrollo de Software",
+    "degreeSchool": "ISTEA - Título Terciario",
+    "degreePeriod": "2014 - 2017",
+    "certificationsTitle": "Certificaciones",
+    "cert1Title": "Epic React",
+    "cert1Provider": "Kent C. Dodds (epicreact.dev)",
+    "cert2Title": "CSS-in-JS",
+    "cert2Provider": "Josh W. Comeau (css-for-js.dev)"
+  },
+  "contact": {
+    "sectionTitle": "Trabajemos Juntos",
+    "body": "¿Listo para construir algo increíble? Siempre estoy abierto a discutir nuevas oportunidades y proyectos interesantes.",
+    "githubLabel": "Perfil de GitHub"
+  },
+  "footer": {
+    "copy": "© 2024 Alejandro Valencia. Ingeniero de Software Full-Stack en Buenos Aires, Argentina."
+  },
+  "metadata": {
+    "title": "Alejandro Valencia | Ingeniero de Producto y Desarrollador Freelance",
+    "description": "Ingeniero de Producto Freelance con más de 10 años construyendo aplicaciones web escalables. Especializado en React, Next.js, TypeScript. MVPs y plataformas completas para startups.",
+    "keywords": [
+      "ingeniero de software freelance",
+      "ingeniero de producto",
+      "desarrollador React",
+      "desarrollador Next.js",
+      "TypeScript",
+      "startup MVP",
+      "desarrollador web Buenos Aires",
+      "desarrollador full-stack",
+      "Alejandro Valencia",
+      "valenciahq"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "contact": "Contact",
+    "github": "GitHub"
+  },
+  "hero": {
+    "role": "Product Engineer",
+    "bio": "10+ years of experience building scalable web applications. Specialized in Frontend development with React and TypeScript since 2017, delivering MVPs and full platforms for startups and tech-driven teams.",
+    "location": "Buenos Aires, Argentina",
+    "getInTouch": "Get In Touch",
+    "downloadResume": "Download Resume"
+  },
+  "skills": {
+    "sectionTitle": "Core Skills",
+    "professionalTitle": "Professional Skills",
+    "languagesTitle": "Languages",
+    "spanish": "Spanish",
+    "spanishLevel": "Native",
+    "english": "English",
+    "englishLevel": "B2/C1 Professional",
+    "items": [
+      "Full-Stack Web Development",
+      "Rapid Prototyping & MVP Delivery",
+      "Product Thinking & User-Centered Design",
+      "Codebase Scalability & Maintainability",
+      "Cross-functional Collaboration",
+      "Agile Methodologies"
+    ]
+  },
+  "techStack": {
+    "sectionTitle": "Tech Stack",
+    "cardTitle": "Technologies & Tools",
+    "cardDescription": "Modern technologies I use to build scalable applications"
+  },
+  "experience": {
+    "sectionTitle": "Work Experience",
+    "jobs": [
+      {
+        "title": "Founding Engineer",
+        "company": "Bondly",
+        "period": "09/24 - Present",
+        "description": "Owned full lifecycle. Launched cookie consent, rebuilt scheduling tool, improved SEO and tracking.",
+        "stack": "Next.js, Remix, NestJS, Supabase, TypeScript, AI tools"
+      },
+      {
+        "title": "Freelance Developer",
+        "company": "Independent",
+        "period": "2023 - Present",
+        "description": "Building high-performance web applications and MVPs. Collaborated with CTOs and CEOs on startup initiatives.",
+        "stack": "Next.js, React, TypeScript, Tailwind CSS, AWS Serverless"
+      },
+      {
+        "title": "Senior Full Stack Engineer",
+        "company": "StackZone",
+        "period": "03/22 - 08/23",
+        "description": "Improved WebApp via refactoring, mentoring, and TS best practices. Built cost modules and Serverless APIs.",
+        "stack": "React, TypeScript, AWS, Redux-Saga, Cypress, PostgreSQL"
+      },
+      {
+        "title": "Lead Frontend Developer",
+        "company": "Commit Studio",
+        "period": "11/21 - 03/22",
+        "description": "Led feature development and team support. Delivered credit partner platform (PedidosYa) and e-commerce CLI.",
+        "stack": "Next.js, TypeScript, MySQL, Redux-Toolkit"
+      },
+      {
+        "title": "Sr Software Engineer",
+        "company": "Santander Tecnologia",
+        "period": "06/20 - 11/21",
+        "description": "Frontend lead for Checks team. Built microsites and BFF with NestJS. Led internal React training.",
+        "stack": "React, NestJS, TypeScript, Redux-Toolkit"
+      },
+      {
+        "title": "Software Engineer",
+        "company": "ParkAssist",
+        "period": "06/20 - 11/21",
+        "description": "Developed parking admin platform using AWS and React. Delivered performant client-side features.",
+        "stack": "React, TypeScript, Redux, AWS IAM, IoT, DynamoDB"
+      }
+    ]
+  },
+  "education": {
+    "sectionTitle": "Education & Certifications",
+    "educationTitle": "Education",
+    "degreeTitle": "Superior Software Development Technician",
+    "degreeSchool": "ISTEA - Tertiary Degree",
+    "degreePeriod": "2014 - 2017",
+    "certificationsTitle": "Certifications",
+    "cert1Title": "Epic React",
+    "cert1Provider": "Kent C. Dodds (epicreact.dev)",
+    "cert2Title": "CSS-in-JS",
+    "cert2Provider": "Josh W. Comeau (css-for-js.dev)"
+  },
+  "contact": {
+    "sectionTitle": "Let's Work Together",
+    "body": "Ready to build something amazing? I'm always open to discussing new opportunities and interesting projects.",
+    "githubLabel": "GitHub Profile"
+  },
+  "footer": {
+    "copy": "© 2024 Alejandro Valencia. Full-stack Software Engineer based in Buenos Aires, Argentina."
+  },
+  "metadata": {
+    "title": "Alejandro Valencia | Product Engineer & Freelance Software Developer",
+    "description": "Freelance Product Engineer with 10+ years building scalable web apps. Specialized in React, Next.js, TypeScript. Delivering MVPs and full platforms for startups.",
+    "keywords": [
+      "freelance software engineer",
+      "product engineer",
+      "React developer",
+      "Next.js developer",
+      "TypeScript",
+      "startup MVP",
+      "web developer Buenos Aires",
+      "full-stack developer",
+      "Alejandro Valencia",
+      "valenciahq"
+    ]
+  }
+}
