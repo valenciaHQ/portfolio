@@ -1,5 +1,7 @@
+"use client";
 /** @format */
 
+import { motion } from "motion/react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "./card";
@@ -20,6 +22,10 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
     <Card className="group overflow-hidden border-none shadow-none transition-all hover:shadow-xl cursor-pointer">
       <div className="relative aspect-[16/9] overflow-hidden rounded-lg">
         <Image
@@ -56,5 +62,6 @@ export default function ProjectCard({
         </div>
       </CardContent>
     </Card>
+    </motion.div>
   );
 }

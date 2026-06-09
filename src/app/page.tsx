@@ -1,7 +1,7 @@
+"use client";
 /** @format */
 
-"use client";
-
+import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,6 +23,8 @@ import {
   Star,
 } from "lucide-react";
 import { EnvelopeClosedIcon, CalendarIcon } from "@radix-ui/react-icons";
+import { AnimatedGrid, AnimatedItem } from "@/components/ui/AnimatedSection";
+import { staggerContainer, fadeSlideUp } from "@/lib/animations";
 
 export default function Portfolio() {
   const techStack = [
@@ -133,63 +135,99 @@ export default function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-6">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-              Alejandro Valencia
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-6">
-              Product Engineer
-            </p>
-            <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              10+ years of experience building scalable web applications.
-              Specialized in Frontend development with React and TypeScript
-              since 2017, delivering MVPs and full platforms for startups and
-              tech-driven teams.
-            </p>
-          </div>
+      <section className="relative py-20 px-4 overflow-hidden">
+        {/* Animated color blobs */}
+        <motion.div
+          className="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-violet-300 opacity-30 blur-3xl pointer-events-none"
+          animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0], scale: [1, 1.1, 0.95, 1] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-20 right-1/4 w-80 h-80 rounded-full bg-sky-300 opacity-25 blur-3xl pointer-events-none"
+          animate={{ x: [0, -50, 30, 0], y: [0, 40, -20, 0], scale: [1, 0.9, 1.15, 1] }}
+          transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-emerald-300 opacity-20 blur-3xl pointer-events-none"
+          animate={{ x: [0, 30, -40, 0], y: [0, -20, 30, 0], scale: [1, 1.2, 0.9, 1] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2 text-gray-600">
-              <MapPin className="w-4 h-4" />
-              <span>Buenos Aires, Argentina</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <EnvelopeClosedIcon className="w-4 h-4" />
-              <span>alejandro.d.valencia@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-600">
-              <Globe className="w-4 h-4" />
-              <span>valenciahq.com</span>
-            </div>
-          </div>
+        <div className="relative max-w-6xl mx-auto text-center">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              className="mb-6"
+              variants={fadeSlideUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-blue-600 to-emerald-500 bg-clip-text text-transparent">
+                Alejandro Valencia
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 mb-6">
+                Product Engineer
+              </p>
+              <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                10+ years of experience building scalable web applications.
+                Specialized in Frontend development with React and TypeScript
+                since 2017, delivering MVPs and full platforms for startups and
+                tech-driven teams.
+              </p>
+            </motion.div>
 
-          <div className="flex justify-center gap-4">
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
-              onClick={() => {
-                window.location.href = "mailto:alejandro.d.valencia@gmail.com";
-              }}
+            <motion.div
+              className="flex flex-wrap justify-center gap-4 mb-8"
+              variants={fadeSlideUp}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
-              Get In Touch
-            </Button>
-            <Button
-              size="lg"
-              className="bg-gray-900 text-white hover:bg-gray-800"
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/files/alejandrovalencia.pdf";
-                link.download = "alejandro-valencia-resume.pdf";
-                link.click();
-              }}
+              <div className="flex items-center gap-2 text-gray-600">
+                <MapPin className="w-4 h-4" />
+                <span>Buenos Aires, Argentina</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600">
+                <EnvelopeClosedIcon className="w-4 h-4" />
+                <span>alejandro.d.valencia@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-600">
+                <Globe className="w-4 h-4" />
+                <span>valenciahq.com</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="flex justify-center gap-4"
+              variants={fadeSlideUp}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              Download Resume
-            </Button>
-          </div>
+              <Button
+                size="lg"
+                variant="outline"
+                className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                onClick={() => {
+                  window.location.href =
+                    "mailto:alejandro.d.valencia@gmail.com";
+                }}
+              >
+                <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
+                Get In Touch
+              </Button>
+              <Button
+                size="lg"
+                className="bg-gray-900 text-white hover:bg-gray-800"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/files/alejandrovalencia.pdf";
+                  link.download = "alejandro-valencia-resume.pdf";
+                  link.click();
+                }}
+              >
+                Download Resume
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -199,54 +237,58 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Core Skills
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-yellow-500" />
-                  Professional Skills
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill, index) => (
-                    <Badge
-                      key={index}
-                      variant="secondary"
-                      className="bg-gray-100 text-gray-700"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          <AnimatedGrid className="grid md:grid-cols-2 gap-8">
+            <AnimatedItem>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Star className="w-5 h-5 text-yellow-500" />
+                    Professional Skills
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill, index) => (
+                      <Badge
+                        key={index}
+                        variant="secondary"
+                        className="bg-gray-100 text-gray-700"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Languages className="w-5 h-5 text-green-500" />
-                  Languages
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Spanish</span>
-                    <Badge className="bg-green-100 text-green-800">
-                      Native
-                    </Badge>
+            <AnimatedItem>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Languages className="w-5 h-5 text-green-500" />
+                    Languages
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium">Spanish</span>
+                      <Badge className="bg-green-100 text-green-800">
+                        Native
+                      </Badge>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium">English</span>
+                      <Badge className="bg-blue-100 text-blue-800">
+                        B2/C1 Professional
+                      </Badge>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">English</span>
-                    <Badge className="bg-blue-100 text-blue-800">
-                      B2/C1 Professional
-                    </Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                </CardContent>
+              </Card>
+            </AnimatedItem>
+          </AnimatedGrid>
         </div>
       </section>
 
@@ -256,30 +298,34 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Tech Stack
           </h2>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Code className="w-5 h-5 text-purple-500" />
-                Technologies & Tools
-              </CardTitle>
-              <CardDescription>
-                Modern technologies I use to build scalable applications
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {techStack.map((tech, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="bg-white border-gray-300 text-gray-700"
-                  >
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <AnimatedGrid className="grid grid-cols-1">
+            <AnimatedItem>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Code className="w-5 h-5 text-purple-500" />
+                    Technologies & Tools
+                  </CardTitle>
+                  <CardDescription>
+                    Modern technologies I use to build scalable applications
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {techStack.map((tech, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="bg-white border-gray-300 text-gray-700"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedItem>
+          </AnimatedGrid>
         </div>
       </section>
 
@@ -289,40 +335,42 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Work Experience
           </h2>
-          <div className="space-y-6">
+          <AnimatedGrid className="space-y-6">
             {workExperience.map((job, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-xl">{job.title}</CardTitle>
-                      <CardDescription className="text-lg font-medium text-gray-600">
-                        {job.company}
-                      </CardDescription>
+              <AnimatedItem key={index}>
+                <Card>
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <CardTitle className="text-xl">{job.title}</CardTitle>
+                        <CardDescription className="text-lg font-medium text-gray-600">
+                          {job.company}
+                        </CardDescription>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                        <CalendarIcon className="w-4 h-4" />
+                        {job.period}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <CalendarIcon className="w-4 h-4" />
-                      {job.period}
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-700 mb-3">{job.description}</p>
+                    <div className="flex flex-wrap gap-1">
+                      {job.stack.split(", ").map((tech, techIndex) => (
+                        <Badge
+                          key={techIndex}
+                          variant="secondary"
+                          className="text-xs bg-gray-100 text-gray-600"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
                     </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700 mb-3">{job.description}</p>
-                  <div className="flex flex-wrap gap-1">
-                    {job.stack.split(", ").map((tech, techIndex) => (
-                      <Badge
-                        key={techIndex}
-                        variant="secondary"
-                        className="text-xs bg-gray-100 text-gray-600"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </AnimatedItem>
             ))}
-          </div>
+          </AnimatedGrid>
         </div>
       </section>
 
@@ -332,51 +380,55 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Education & Certifications
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5 text-blue-500" />
-                  Education
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div>
-                  <h3 className="font-semibold text-lg">
-                    Superior Software Development Technician
-                  </h3>
-                  <p className="text-gray-600">ISTEA - Tertiary Degree</p>
-                  <p className="text-sm text-gray-500">2014 - 2017</p>
-                </div>
-              </CardContent>
-            </Card>
+          <AnimatedGrid className="grid md:grid-cols-2 gap-6">
+            <AnimatedItem>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <GraduationCap className="w-5 h-5 text-blue-500" />
+                    Education
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div>
+                    <h3 className="font-semibold text-lg">
+                      Superior Software Development Technician
+                    </h3>
+                    <p className="text-gray-600">ISTEA - Tertiary Degree</p>
+                    <p className="text-sm text-gray-500">2014 - 2017</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </AnimatedItem>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-orange-500" />
-                  Certifications
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  <div>
-                    <h3 className="font-semibold">Epic React</h3>
-                    <p className="text-sm text-gray-600">
-                      Kent C. Dodds (epicreact.dev)
-                    </p>
+            <AnimatedItem>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Award className="w-5 h-5 text-orange-500" />
+                    Certifications
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div>
+                      <h3 className="font-semibold">Epic React</h3>
+                      <p className="text-sm text-gray-600">
+                        Kent C. Dodds (epicreact.dev)
+                      </p>
+                    </div>
+                    <Separator />
+                    <div>
+                      <h3 className="font-semibold">CSS-in-JS</h3>
+                      <p className="text-sm text-gray-600">
+                        Josh W. Comeau (css-for-js.dev)
+                      </p>
+                    </div>
                   </div>
-                  <Separator />
-                  <div>
-                    <h3 className="font-semibold">CSS-in-JS</h3>
-                    <p className="text-sm text-gray-600">
-                      Josh W. Comeau (css-for-js.dev)
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                </CardContent>
+              </Card>
+            </AnimatedItem>
+          </AnimatedGrid>
         </div>
       </section>
 
@@ -394,7 +446,7 @@ export default function Portfolio() {
               variant="outline"
               className="bg-transparent text-white border-white hover:bg-white hover:text-gray-900"
               onClick={() => {
-                window.location.href = "mailto:someone@example.com";
+                window.location.href = "mailto:alejandro.d.valencia@gmail.com";
               }}
             >
               <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
