@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Alejandro Valencia | Product Engineer & Freelance Software Developer",
     description:
       "Freelance Product Engineer with 10+ years building scalable web apps. React, Next.js, TypeScript. MVPs and full platforms for startups.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Alejandro Valencia" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Alejandro Valencia — Product Engineer" }],
     locale: "en_US",
   },
   twitter: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Alejandro Valencia | Product Engineer & Freelance Software Developer",
     description:
       "Freelance Product Engineer with 10+ years building scalable web apps. React, Next.js, TypeScript.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
 };
 
