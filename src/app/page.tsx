@@ -21,6 +21,7 @@ import {
   Code,
   Languages,
   Star,
+  FileText,
 } from "lucide-react";
 import { EnvelopeClosedIcon, CalendarIcon } from "@radix-ui/react-icons";
 import { AnimatedGrid, AnimatedItem } from "@/components/ui/AnimatedSection";
@@ -218,18 +219,29 @@ export default function Portfolio() {
                 <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
                 Get In Touch
               </Button>
-              <Button
-                size="lg"
-                className="bg-gray-900 text-white hover:bg-gray-800"
-                onClick={() => {
-                  const link = document.createElement("a");
-                  link.href = "/files/alejandrovalencia.pdf";
-                  link.download = "alejandro-valencia-resume.pdf";
-                  link.click();
-                }}
+              <motion.a
+                href="/files/alejandrovalencia.pdf"
+                download="alejandro-valencia-resume.pdf"
+                className="group inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-gray-700 hover:shadow-lg hover:scale-105"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
               >
+                <motion.span
+                  className="flex items-center"
+                  animate={{ y: [0, -2, 0] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <FileText className="w-4 h-4" />
+                </motion.span>
                 Download Resume
-              </Button>
+                <motion.span
+                  className="text-xs opacity-60 group-hover:opacity-100 transition-opacity"
+                  animate={{ y: [0, 2, 0] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
+                >
+                  PDF
+                </motion.span>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
