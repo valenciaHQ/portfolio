@@ -121,11 +121,15 @@ export default function Portfolio() {
               <Button
                 variant="outline"
                 className="bg-white text-gray-700 border-gray-300 hover:bg-gray-50"
+                onClick={() => { window.location.href = "mailto:alejandro.d.valencia@gmail.com"; }}
               >
                 <EnvelopeClosedIcon className="w-4 h-4 mr-2" />
                 Contact
               </Button>
-              <Button className="bg-gray-900 text-white hover:bg-gray-800">
+              <Button
+                className="bg-gray-900 text-white hover:bg-gray-800"
+                onClick={() => { window.open("https://github.com/valenciaHQ", "_blank"); }}
+              >
                 <Github className="w-4 h-4 mr-2" />
                 GitHub
               </Button>
