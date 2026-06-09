@@ -135,8 +135,25 @@ export default function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="relative py-20 px-4 overflow-hidden">
+        {/* Animated color blobs */}
+        <motion.div
+          className="absolute top-10 left-1/4 w-72 h-72 rounded-full bg-violet-300 opacity-30 blur-3xl pointer-events-none"
+          animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0], scale: [1, 1.1, 0.95, 1] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-20 right-1/4 w-80 h-80 rounded-full bg-sky-300 opacity-25 blur-3xl pointer-events-none"
+          animate={{ x: [0, -50, 30, 0], y: [0, 40, -20, 0], scale: [1, 0.9, 1.15, 1] }}
+          transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+        <motion.div
+          className="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-emerald-300 opacity-20 blur-3xl pointer-events-none"
+          animate={{ x: [0, 30, -40, 0], y: [0, -20, 30, 0], scale: [1, 1.2, 0.9, 1] }}
+          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+
+        <div className="relative max-w-6xl mx-auto text-center">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -147,7 +164,7 @@ export default function Portfolio() {
               variants={fadeSlideUp}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-blue-600 to-emerald-500 bg-clip-text text-transparent">
                 Alejandro Valencia
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-6">
