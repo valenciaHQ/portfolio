@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ValenciaHQ — Sitio Institucional
 
-## Getting Started
+Next.js (App Router) + React 19 + Tailwind CSS v4. Migrado desde el prototipo
+HTML a componentes, con metadata SEO completa, sitemap/robots automáticos y
+JSON-LD.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router, Turbopack)
+- **TypeScript** (`strict`)
+- **Tailwind CSS v4** (config vía `@theme` en `app/globals.css`, sin
+  `tailwind.config.ts`)
+- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (mono) vía
+  `next/font/google`
+
+## Estructura
+
+```
+app/
+  layout.tsx      # metadata, fonts, JSON-LD
+  page.tsx        # ensambla los componentes
+  sitemap.ts       # /sitemap.xml
+  robots.ts        # /robots.txt
+  globals.css      # design tokens (colores, fuentes)
+components/
+  Nav, Hero, Terminal, Services, SeoDiff, Process,
+  StackSection, Addons, PortfolioRate, Contact, Footer, Reveal
+lib/
+  site-config.ts   # dominio, email, ubicación — un solo lugar para editar
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Correr en local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Antes de deployar
 
-## Learn More
+- [ ] Confirmar dominio final en `lib/site-config.ts` (`siteConfig.url`). Hoy
+      apunta a `https://www.valenciahq.com`. Si en algún momento pasa por un
+      subdominio de staging, actualizar acá y no dejarlo así de forma
+      permanente (ver nota de SEO: subdominios no heredan la autoridad del
+      dominio raíz).
+- [ ] Reemplazar el email/GitHub en `site-config.ts` si cambian.
+- [ ] Agregar una imagen Open Graph real (`public/og.png`, 1200×630) y
+      referenciarla en `app/layout.tsx` → `metadata.openGraph.images`. Sin
+      esto, los links compartidos en WhatsApp/LinkedIn no muestran preview.
+- [ ] `npm run build` local antes de mergear, para confirmar que compila con
+      acceso normal a internet (fonts de Google se resuelven en build time).
 
-To learn more about Next.js, take a look at the following resources:
+## Subir esto al repo (`github.com/valenciaHQ/portfolio`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Siguiendo el mismo flujo de `Cómo Trabajamos.md` (rama + PR, nunca push
+directo a `main`):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Si es la primera vez que cloná el repo en esta máquina:
+git clone https://github.com/valenciaHQ/portfolio.git
+cd portfolio
 
-## Deploy on Vercel
+# Si el repo ya tenía contenido previo, copiá estos archivos adentro
+# reemplazando lo que corresponda antes de seguir.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+git checkout -b feature/nextjs-migration
+git add .
+git commit -m "feat: migrar sitio institucional a Next.js con SEO técnico"
+git push -u origin feature/nextjs-migration
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Después abrí el PR desde la terminal (si tenés `gh` instalado) o desde el
+navegador:
+
+```bash
+gh pr create --title "feat: migrar sitio a Next.js" --body "Migración del prototipo HTML a Next.js App Router. Incluye metadata SEO, sitemap, robots.txt y JSON-LD." --base main
+```
+
+O directamente en:
+`https://github.com/valenciaHQ/portfolio/pull/new/feature/nextjs-migration`
+
+## Deploy
+
+Pensado para Vercel (Edge/Serverless, según el stack documentado). Conectar
+el repo en Vercel y apuntar el dominio `www.valenciahq.com` desde ahí — no
+hace falta configuración adicional, Next.js App Router funciona out of the
+box.

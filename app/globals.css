@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b0f17;
+  --ink-soft: #141b29;
+  --ink-line: rgba(255, 255, 255, 0.09);
+  --paper: #f4f5f1;
+  --card: #ffffff;
+  --line: #e3e5df;
+  --signal: #2fe28a;
+  --signal-deep: #18b76c;
+  --amber: #ffb454;
+  --text: #0b0f17;
+  --muted: #6b7480;
+  --muted-onink: #8a93a6;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-signal: var(--signal);
+  --color-signal-deep: var(--signal-deep);
+  --color-amber: var(--amber);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-muted-onink: var(--muted-onink);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.term-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--signal);
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
