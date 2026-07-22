@@ -57,9 +57,10 @@ export default function Terminal() {
           lineIndex = 0;
           continue;
         }
-        await typeLine(LINES[lineIndex].text);
+        const line = LINES[lineIndex].text;
+        await typeLine(line);
         if (cancelled) return;
-        setShown((prev) => [...prev, LINES[lineIndex].text]);
+        setShown((prev) => [...prev, line]);
         setTyping("");
         lineIndex++;
         await new Promise((r) => setTimeout(r, 260));
