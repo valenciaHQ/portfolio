@@ -44,9 +44,9 @@ npm run dev
       permanente (ver nota de SEO: subdominios no heredan la autoridad del
       dominio raíz).
 - [ ] Reemplazar el email/GitHub en `site-config.ts` si cambian.
-- [ ] Agregar una imagen Open Graph real (`public/og.png`, 1200×630) y
-      referenciarla en `app/layout.tsx` → `metadata.openGraph.images`. Sin
-      esto, los links compartidos en WhatsApp/LinkedIn no muestran preview.
+- [x] Imagen Open Graph: generada dinámicamente en `app/opengraph-image.tsx`
+      (vía `next/og`), Next la asocia automáticamente a `metadata`. Favicon
+      dinámico en `app/icon.tsx` con el mismo mecanismo.
 - [ ] `npm run build` local antes de mergear, para confirmar que compila con
       acceso normal a internet (fonts de Google se resuelven en build time).
 

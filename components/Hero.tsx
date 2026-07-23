@@ -1,4 +1,5 @@
 import Terminal from "./Terminal";
+import { whatsappUrl } from "@/lib/site-config";
 
 export default function Hero() {
   return (
@@ -22,7 +23,9 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap gap-3.5">
               <a
-                href="#contacto"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-signal px-6 py-3.5 text-[14.5px] font-semibold text-ink transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(47,226,138,0.28)]"
               >
                 Agendar discovery call
