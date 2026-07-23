@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "ValenciaHQ",
   title: "ValenciaHQ — Desarrollo Web, Sistemas a Medida y SEO Técnico",
   description:
-    "Ingeniería, no artesanía improvisada. Landing pages, sitios institucionales, productos a medida y SEO técnico para negocios de cualquier rubro. Buenos Aires, Argentina.",
+    "Desarrollo web y SEO técnico en Buenos Aires: landing pages, sitios institucionales y sistemas a medida para tu negocio, con primera entrega en 48–72hs.",
   // TODO: si el sitio termina viviendo en un subdominio en algún momento
   // (staging), actualizar esto y el metadataBase en app/layout.tsx.
   url: "https://www.valenciahq.com",

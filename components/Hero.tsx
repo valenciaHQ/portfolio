@@ -11,9 +11,10 @@ export default function Hero() {
               software a medida · seo técnico · buenos aires
             </span>
             <h1 className="mb-5 font-display text-[2.1rem] font-bold leading-[1.08] sm:text-[2.6rem] lg:text-[3.35rem]">
-              Ingeniería,
-              <br />
-              no artesanía <em className="text-signal not-italic">improvisada</em>.
+              Desarrollo Web y SEO Técnico en Buenos Aires
+              <span className="mt-3 block font-sans text-[1.05rem] font-normal leading-snug text-muted-onink sm:text-[1.15rem]">
+                Ingeniería, no artesanía <em className="text-signal not-italic">improvisada</em>.
+              </span>
             </h1>
             <p className="mb-8 max-w-[46ch] text-[17px] text-muted-onink">
               Tu primera web — o la que hace falta renovar — lista en días, no

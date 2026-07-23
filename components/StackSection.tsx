@@ -26,9 +26,9 @@ export default function StackSection() {
         <Reveal className="grid grid-cols-1 gap-8 sm:grid-cols-3">
           {GROUPS.map((g) => (
             <div key={g.title}>
-              <h4 className="mb-3.5 font-mono text-xs uppercase tracking-wider text-muted">
+              <h3 className="mb-3.5 font-mono text-xs uppercase tracking-wider text-muted">
                 {g.title}
-              </h4>
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {g.chips.map((chip) => (
                   <span
