@@ -11,4 +11,9 @@ export const siteConfig = {
   githubHandle: "valenciaHQ",
   location: "Buenos Aires, Argentina",
   locale: "es_AR",
+  whatsapp: "5491140317830",
 } as const;
+
+export const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
+  "Hola! Quiero agendar una discovery call para hablar sobre mi proyecto.",
+)}`;

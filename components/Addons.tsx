@@ -1,30 +1,27 @@
 import Reveal from "./Reveal";
 
-const ADDONS = [
-  {
-    title: "Auditoría y Remediación SEO",
-    desc: "Análisis de rendimiento e indexación, one-off",
-    price: "USD 150–250",
-  },
+const FEATURED_ADDON = {
+  title: "Auditoría y Remediación SEO",
+  desc: "Análisis de rendimiento e indexación, one-off",
+  price: "USD 150–250",
+};
+
+const OTHER_ADDONS = [
   {
     title: "Crecimiento Orgánico Continuo",
     desc: "Retainer mensual, incluye hosting",
-    price: "USD 150–300/mes",
   },
   {
     title: "Ficha de Google Business",
     desc: "Reclamo, categorías, fotos y posts iniciales",
-    price: "USD 100–150",
   },
   {
     title: "Gestión de Reputación Online",
     desc: "Monitoreo y respuesta a reseñas",
-    price: "USD 100–200/mes",
   },
   {
     title: "Campañas Meta Ads",
     desc: "Segmentación local y reporte mensual",
-    price: "USD 150–300/mes + pauta",
   },
 ];
 
@@ -45,19 +42,28 @@ export default function Addons() {
           </p>
         </Reveal>
 
-        <Reveal className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {ADDONS.map((a) => (
+        <Reveal className="mb-5 flex flex-col items-start justify-between gap-4 rounded-[10px] border border-ink bg-card p-7 sm:flex-row sm:items-center">
+          <div>
+            <h3 className="mb-1.5 text-[19px] font-bold">
+              {FEATURED_ADDON.title}
+            </h3>
+            <p className="text-[13.5px] text-muted">{FEATURED_ADDON.desc}</p>
+          </div>
+          <span className="whitespace-nowrap font-mono text-[22px] font-semibold text-signal-deep">
+            {FEATURED_ADDON.price}
+          </span>
+        </Reveal>
+
+        <Reveal className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {OTHER_ADDONS.map((a) => (
             <div
               key={a.title}
-              className="flex items-center justify-between gap-4 rounded-[10px] border border-line bg-white px-5 py-5"
+              className="rounded-[10px] border border-line px-5 py-4"
             >
-              <div>
-                <h4 className="mb-1 text-[14.5px] font-semibold">{a.title}</h4>
-                <p className="text-[12.5px] text-muted">{a.desc}</p>
-              </div>
-              <span className="whitespace-nowrap font-mono text-[13px] font-semibold text-signal-deep">
-                {a.price}
-              </span>
+              <h4 className="mb-1 text-[13.5px] font-semibold text-muted">
+                {a.title}
+              </h4>
+              <p className="text-[12px] text-muted">{a.desc}</p>
             </div>
           ))}
         </Reveal>

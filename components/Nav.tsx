@@ -1,3 +1,5 @@
+import { whatsappUrl } from "@/lib/site-config";
+
 export default function Nav() {
   return (
     <nav className="sticky top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-md">
@@ -25,7 +27,9 @@ export default function Nav() {
             stack
           </a>
           <a
-            href="#contacto"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-md bg-ink px-4 py-2 font-mono text-[13px] font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-signal-deep"
           >
             Agendar call
