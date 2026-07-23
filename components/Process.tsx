@@ -75,7 +75,7 @@ export default function Process() {
                 {phase.n}
               </span>
               <div>
-                <h4 className="mb-1.5 text-base font-bold">{phase.title}</h4>
+                <h3 className="mb-1.5 text-base font-bold">{phase.title}</h3>
                 <p className="text-[13.5px] text-muted">{phase.desc}</p>
               </div>
               <span className="hidden self-center rounded-md border border-signal-deep/25 bg-signal/10 px-2.5 py-2 text-center font-mono text-[11.5px] text-signal-deep sm:block">

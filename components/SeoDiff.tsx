@@ -72,9 +72,9 @@ export default function SeoDiff() {
         <Reveal className="grid grid-cols-1 gap-7 sm:grid-cols-3">
           {FEATURES.map((f) => (
             <div key={f.title}>
-              <h4 className="mb-2 font-display text-[15px] font-bold text-white">
+              <h3 className="mb-2 font-display text-[15px] font-bold text-white">
                 {f.title}
-              </h4>
+              </h3>
               <p className="text-[13.5px] leading-relaxed text-muted-onink">
                 {f.desc}
               </p>
