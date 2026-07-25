@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import GestionSection from "@/components/GestionSection";
 import SeoDiff from "@/components/SeoDiff";
 import Process from "@/components/Process";
 import StackSection from "@/components/StackSection";
@@ -15,6 +16,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Services />
+      <GestionSection />
       <SeoDiff />
       <Process />
       <StackSection />

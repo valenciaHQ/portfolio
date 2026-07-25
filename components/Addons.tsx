@@ -6,7 +6,7 @@ const FEATURED_ADDON = {
   price: "USD 150–250",
 };
 
-const OTHER_ADDONS = [
+const OTHER_ADDONS: { title: string; desc: string; price?: string }[] = [
   {
     title: "Crecimiento Orgánico Continuo",
     desc: "Retainer mensual, incluye hosting",
@@ -22,6 +22,11 @@ const OTHER_ADDONS = [
   {
     title: "Campañas Meta Ads",
     desc: "Segmentación local y reporte mensual",
+  },
+  {
+    title: "Integración y Sync con Portales Inmobiliarios",
+    desc: "Retainer mensual — ideal para clientes de la Plataforma de Gestión Inmobiliaria. Mantenimiento de feeds XML/API (Zonaprop, Argenprop, MercadoLibre Inmuebles), corrección ante cambios de esquema, monitoreo de sincronización.",
+    price: "USD 100–200/mes",
   },
 ];
 
@@ -64,6 +69,11 @@ export default function Addons() {
                 {a.title}
               </h4>
               <p className="text-[12px] text-muted">{a.desc}</p>
+              {a.price && (
+                <p className="mt-1.5 font-mono text-[11px] font-semibold text-signal-deep">
+                  {a.price}
+                </p>
+              )}
             </div>
           ))}
         </Reveal>

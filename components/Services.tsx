@@ -12,6 +12,20 @@ type Service = {
 const SERVICES: Service[] = [
   {
     tag: "Web + SEO",
+    name: "Landing Express",
+    price: "USD 150–180",
+    meta: "Tiempo estimado: 24 a 48 horas",
+    items: [
+      "Ideal para negocios locales de baja rentabilidad",
+      "Una sola página",
+      "Template propio reutilizable",
+      "1 ronda de cambios",
+      "Despliegue de alta performance",
+      "No incluye Google Maps / Google Negocios (disponible como add-on)",
+    ],
+  },
+  {
+    tag: "Web + SEO",
     name: 'Landing "Impulso"',
     price: "USD 250–350",
     meta: "Tiempo estimado: 48 a 72 horas",
@@ -66,7 +80,7 @@ export default function Services() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((s) => (
             <Reveal key={s.name}>
               <div
